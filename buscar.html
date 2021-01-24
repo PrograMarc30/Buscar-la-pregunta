@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <script>
 
-        function load(){
+        function load(color){
             setTimeout(function () {
                 var sentenceObj = document.getElementById('frase');
                 var loader = document.getElementById('loader');
-                var sentenceString = 'No, la Dèlia és una n00b al Minecraft'
+                var sentenceString = 'No se ha encontrado ninguna pregunta.';
                 sentenceObj.innerHTML = sentenceString;
                 loader.parentNode.removeChild(loader);
+                document.body.style.background = "rgb(65, 0, 0)";
 
             }, 3000);
             
@@ -21,8 +22,8 @@
 
     </script>
 </head>
-<body onload="load()">
-    <p id="frase">Buscant si la Dèlia és una pro al Minecraft...</p>
+<body onload="load()" style="background-color: rgb(13, 13, 90);">
+    <p id="frase">Buscando la pregunta...</p>
     <div id="loader"></div>
 </body>
 </html>
